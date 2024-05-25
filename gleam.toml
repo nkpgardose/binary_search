@@ -1,7 +1,7 @@
 name = "binary_search"
 
 # The version of your project (required)
-version = "0.0.0"
+version = "0.1.0"
 
 # A short description of your project (optional)
 # This will be displayed on the package page if the project is published to
