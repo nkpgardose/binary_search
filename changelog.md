@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2024-05-25
+
+### Fixed
+
+- Format the code with the Gleam formatter.
+- Pass GitHub Actions tests workflow.
+
 ## [0.1.0] - 2024-05-25
 
 ### Added
