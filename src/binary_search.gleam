@@ -10,7 +10,12 @@ import gleam/list
 /// > binary_search.perform([1, 2, 3, 4, 5], 3) # returns 2
 /// ```
 pub fn perform(list_of_sorted_numbers: List(Int), value_to_search: Int) {
-  recursive_binary_search(list_of_sorted_numbers, value_to_search, 0, list.length(list_of_sorted_numbers) - 1)
+  recursive_binary_search(
+    list_of_sorted_numbers,
+    value_to_search,
+    0,
+    list.length(list_of_sorted_numbers) - 1,
+  )
 }
 
 /// Recursive binary search function.
@@ -24,7 +29,7 @@ fn recursive_binary_search(
   list_of_sorted_numbers: List(Int),
   value_to_search: Int,
   left_index: Int,
-  right_index: Int
+  right_index: Int,
 ) {
   let is_still_in_range = left_index > right_index
 
@@ -39,8 +44,20 @@ fn recursive_binary_search(
 
       case mid_value == value_to_search, mid_value > value_to_search {
         True, _ -> mid_index
-        False, True -> recursive_binary_search(list_of_sorted_numbers, value_to_search, left_index, mid_index - 1)
-        False, False -> recursive_binary_search(list_of_sorted_numbers, value_to_search, mid_index + 1, right_index)
+        False, True ->
+          recursive_binary_search(
+            list_of_sorted_numbers,
+            value_to_search,
+            left_index,
+            mid_index - 1,
+          )
+        False, False ->
+          recursive_binary_search(
+            list_of_sorted_numbers,
+            value_to_search,
+            mid_index + 1,
+            right_index,
+          )
       }
     }
   }

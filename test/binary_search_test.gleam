@@ -1,6 +1,6 @@
+import binary_search
 import gleeunit
 import gleeunit/should
-import binary_search
 
 pub fn main() {
   gleeunit.main()
